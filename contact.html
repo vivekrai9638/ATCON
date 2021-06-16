@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./scss/css/style.css" />
+  </head>
+
+  <body>
+    <section class="sec_contactMain">
+      <div class="map-container">
+        <div class="home">
+          <a href="index.html" style="z-index: 15"
+            ><i class="fa fa-home" aria-hidden="true"></i> Home</a
+          >
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.2412875376594!2d50.52146191467843!3d26.188828097181464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49aff53f17f5ef%3A0xd321e2af7b0892b4!2sATCON%20BAHRAIN%20CO%20WLL!5e0!3m2!1sen!2sbh!4v1616925199950!5m2!1sen!2sbh"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div class="form-container">
+        <div id="content" class="branding">
+          <span class="slide">
+            <a href="#" onclick="openMenu()">
+              <i class="fas fa-bars"></i>
+            </a>
+          </span>
+          <div id="menu" class="nav">
+            <a href="#" class="close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </a>
+            <!-- <a href="">Services</a> -->
+            <a href="AboutUs.html">About US</a>
+            <a href="project.html">Projects</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="#">Blog </a>
+          </div>
+        </div>
+
+        <!-- <button id="rqst_btn" onclick="show()">SEND REQUEST</button> -->
+
+        <div class="name_reg">
+          <h2 id="head">SEND REQUEST</h2>
+          <form>
+            <input
+              id="name"
+              class="input_f"
+              type="text"
+              placeholder="FULL NAME"
+            />
+            <input
+              id="phone"
+              class="input_f"
+              type="number"
+              placeholder="PHONE NUMBER"
+            />
+            <input
+              id="email-ID"
+              class="input_f"
+              type="email"
+              placeholder="EMAIL ADDRESS"
+            />
+            <textarea
+              name=""
+              id="desc"
+              class="input_f"
+              type="text"
+              placeholder="DESCRIBE YOUR PROJECT"
+              spellcheck="false"
+              cols="30"
+              rows="10"
+            ></textarea>
+
+            <button id="btn" class="input_f">SUBMIT</button>
+          </form>
+        </div>
+
+        <footer class="c-footer">
+          <h3>Sign up for our newsletter</h3>
+          <div class="email-container">
+            <input id="email" type="text" placeholder="Email address" />
+            <button id="btn">SUBSCRIBE</button>
+          </div>
+          <div class="c-footer-box">
+            <h4>2021 Copyright &copy; atcon.com</h4>
+            <span class="f_icons">
+              <a id="F_icon" href=""><i class="fab fa-facebook"></i></a>
+              <a id="F_icon" href=""><i class="fab fa-instagram"></i></a>
+              <a id="F_icon" href=""><i class="fab fa-linkedin"></i></a>
+              <a id="F_icon" href=""><i class="fab fa-google"></i></a>
+            </span>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <script>
+      function show() {
+        const containerMain = document.querySelector(".name_reg");
+        containerMain.style = "transform: translateX(0)";
+        const reqBtn = document.getElementById("rqst_btn");
+        reqBtn.style.opacity = "0";
+      }
+
+      function hide() {
+        const containerMain = document.querySelector(".name_reg");
+        containerMain.style = "transform: translateX(100%)";
+        const reqBtn = document.getElementById("rqst_btn");
+        reqBtn.style.opacity = "1";
+      }
+
+      function openMenu() {
+        document.getElementById("menu").style.left = "0";
+      }
+      function closeMenu() {
+        document.getElementById("menu").style.left = "100%";
+      }
+    </script>
+  </body>
+</html>
