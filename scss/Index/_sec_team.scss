@@ -1,0 +1,88 @@
+.sec_team {
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 5rem;
+  // background: #014958;
+  // border: $border-black;
+
+  #{&}-container {
+    display: flex;
+    // width: 85%;
+    margin: 1.5rem auto 0; /*to reposition the entire container*/
+    height: 80%;
+    padding: 2rem 7.5%;
+    gap: 2.5rem;
+    // background-color: $card-container-bg-color;
+    // border: $border-black;
+
+    & .box-1 {
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      gap: 1%;
+      align-content: flex-start;
+      transition: all 0.75s ease;
+      width: 100%;
+      padding: 1.5rem;
+      // background-color: #96afb8;
+      box-shadow: 0 0 0.1px 3px rgba(206, 191, 173, 0.56);
+      overflow: hidden;
+
+      & .box-p {
+        flex-basis: 100%;
+        transition: all 0.45s ease;
+
+        & img {
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      & .social-p {
+        flex-basis: 1%;
+        transition: all 0.6s ease;
+        position: absolute;
+        z-index: -1;
+        left: 30%;
+        top: 20%;
+      }
+
+      & .about-p {
+        position: absolute;
+        top: 100%;
+        width: 75%;
+        transition: all 0.6s ease;
+        //  border: $border-black;
+
+        &::first-line {
+          font-size: $subhead-size;
+          font-weight: bolder;
+          transition: all 0.6s ease;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-20%);
+      }
+
+      &:hover .box-p {
+        flex-basis: 85%;
+        //  border: $border-blue;
+      }
+
+      &:hover .social-p {
+        flex-basis: 19%;
+        left: 87%;
+        font-size: $icon-size;
+        //  border: $border-black;
+      }
+      &:hover .about-p {
+        top: 85%;
+        font-size: $content-size;
+        //  border: $border-black;
+      }
+    }
+  }
+}

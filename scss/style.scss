@@ -1,0 +1,128 @@
+///////// ======== Partials ======== //////////
+
+@import "./default/colors";
+@import "./default/presets";
+@import "./default/containers";
+@import "./default/fonts";
+@import "./default/mixins";
+@import "./default/variables";
+
+///////// ======== Repeated Classes ======== //////////
+
+.head-main {
+  flex-basis: 100%;
+  height: 20%;
+  font-size: 4vw;
+  -webkit-text-stroke: 2px #ddd;
+  -webkit-text-fill-color: transparent;
+  margin-left: 7.5%;
+  font-family: "Roboto", sans-serif;
+  // border: $border-red;
+
+  & span.underline {
+    height: 0.3rem;
+    width: 20%;
+    display: block;
+    background: #31bff7;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+  }
+}
+
+.content-box {
+  position: relative;
+  margin: 0 auto;
+  padding: 8rem 0;
+  // background: $secondary-color;
+  // border: $border-black;
+}
+
+#active {
+  color: white;
+  background: black;
+}
+
+.home {
+  position: fixed;
+  top: 1.5rem;
+  left: 2.5rem;
+  & a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+}
+
+///////// ======== JavaScript Classes ======== //////////
+
+.scrolled {
+  border-color: #014958 transparent transparent transparent !important;
+  // opacity: 0.95;
+}
+
+.scrolled-color {
+  color: #eee !important;
+}
+
+.hiddenScroll {
+  opacity: 0;
+  transform: translateY(15rem);
+}
+// ======================= NAVBAR =================== //
+
+@import "./default/navbar";
+
+// ======================= HEADER =================== //
+
+@import "./Index/header";
+
+// ======================= MAIN BANNER =================== //
+
+@import "./Index/main";
+
+// ====================== SECTION =================== //
+
+// SERVICES
+@import "./Index/sec_services";
+
+// TEAM
+@import "./Index/sec_team";
+
+// FEEDBACK
+@import "./Index/sec_feedback";
+
+// ARTICLE 1
+@import "./Index/sec_article_1";
+
+// WORK
+@import "./Index/sec_work";
+
+// HELP
+@import "./Index/sec_help";
+
+// ====================== FOOTER =================== //
+
+@import "./default/footer";
+
+// ===========================PROJECTS=======================================================//
+
+@import "./projects/sec_projects";
+
+// ===========================ABOUT US=======================================================//
+
+@import "./AboutUs/sec_container";
+
+// ===========================Contact us=======================================================//
+
+@import "./contact/sec-contactMain";
+
+.loader {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  z-index: 99;
+  display: block;
+  font-size: 5rem;
+  color: #000;
+}

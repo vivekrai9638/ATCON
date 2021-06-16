@@ -1,0 +1,114 @@
+.navbar-main {
+  width: 100%;
+  height: 7rem;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  //   border: $border-blue;
+
+  & .navbar-start {
+    height: 0;
+    width: 90%;
+    left: 5%;
+    position: absolute;
+    border-width: 7rem 3rem;
+    border-color: #222d398c transparent transparent transparent;
+    opacity: 0.98;
+    border-style: solid;
+    z-index: 6;
+  }
+
+  & .navbar {
+    @include flex-align;
+    width: 100%;
+    height: 7rem;
+    // border: $border-black;
+
+    & .logo {
+      width: 32%;
+      height: 7rem;
+      text-align: right;
+      padding-right: 5%;
+      padding-top: 0.5rem;
+      // border: $border-black;
+
+      & img {
+        width: 28%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 7;
+        // border: $border-green;
+      }
+    }
+
+    & ul {
+      @include flex-align;
+      width: 68%;
+      height: 7rem;
+      list-style: none;
+      padding-right: 8%;
+      // border: $border-blue;
+
+      & li {
+        @include flex-column;
+        width: 12%;
+        position: relative;
+        // border: 0.1rem solid #f00;
+
+        & a {
+          color: $text-color-primary;
+          text-decoration: none;
+          // text-transform: uppercase;
+          position: relative;
+          z-index: 7;
+          font-family: "Prata", serif;
+          transition: 0.7s;
+          font-size: 1vw;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+
+      & .searchBox {
+        & form {
+          @include flex-align;
+          position: relative;
+          z-index: 7;
+          width: 70%;
+          margin-left: 3rem;
+          // border: $border-black;
+
+          & .searchText {
+            background: rgba(221, 221, 221, 0.705);
+            width: 80%;
+            height: 2.5rem;
+            border-radius: 5rem 0 0 5rem;
+            border-color: transparent;
+            outline: none;
+            transition: all 0.2s linear;
+            text-align: center;
+            font-size: $content-size;
+            // border: $border-black;
+          }
+          & .searchbtn {
+            width: 20%;
+            border-color: transparent;
+            outline: none;
+            cursor: pointer;
+            background: rgba(221, 221, 221, 0.705);
+            height: 2.5rem;
+            border-radius: 0 5rem 5rem 0;
+            // font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+::-webkit-search-cancel-button {
+  display: none;
+}

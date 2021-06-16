@@ -1,0 +1,111 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  //   border: $border-blue;
+
+  & h3 {
+    @include flex-align;
+    position: absolute;
+    left: 15%;
+    width: 20%;
+    top: 30%;
+    z-index: 2;
+    gap: 0.5rem;
+    font-size: $subhead-size;
+    font-family: "Prata", serif;
+    color: #ddd;
+
+    & span {
+      width: 85%;
+
+      &.line {
+        background: #ddd;
+        height: 0.2rem;
+        width: 15%;
+      }
+    }
+  }
+
+  & h1 {
+    position: absolute;
+    color: #ddd;
+    border-left: 0.75rem solid;
+    padding-left: 3rem;
+    top: 40%;
+    line-height: 1.5;
+    left: 15%;
+    font-size: 3.5vw;
+    font-family: "Prata", serif;
+    z-index: 2;
+    // border: $border-blue;
+    & span {
+      display: block;
+    }
+  }
+
+  & .btn {
+    color: #ddd !important;
+    all: unset;
+    width: 8%;
+    padding: 1.5em;
+    text-align: center;
+    position: absolute;
+    left: 15%;
+    top: 80%;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: 500;
+    font-size: 1vw;
+    font-family: "Prata", serif;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   display: block;
+    //   top: 7%;
+    //   left: 0;
+    //   width: 100%;
+    //   bottom: 7%;
+    //   z-index: -1;
+    // }
+
+    & .btn-span {
+      display: inline-block;
+      width: 10%;
+      height: 5%;
+      color: #ddd;
+      position: absolute;
+    }
+
+    & span.top {
+      @extend .btn-span;
+      left: 0;
+      top: 0;
+    }
+    & span.bottom {
+      @extend .btn-span;
+      right: 0;
+      bottom: 0;
+    }
+
+    & > * {
+      transition: all 0.5s ease-in-out;
+      background: linear-gradient($primary-color 15%, $accent-color 100%);
+    }
+
+    &:hover > * {
+      transform: scaleX(20);
+      background: linear-gradient($primary-color 15%, $accent-color 100%);
+    }
+
+    &:hover {
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}

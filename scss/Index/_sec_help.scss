@@ -1,0 +1,54 @@
+.sec_help {
+  // background: #014958;
+  margin-bottom: 0;
+  @include wrap-flex;
+  min-height: 80vh;
+
+  #{&}-container {
+    @include flex-align;
+    flex-basis: 100%;
+    padding: 0 7.5%;
+    // background: #4c8494;
+    margin: 5rem auto;
+    // border: $border-red;
+
+    & h2 {
+      font-size: $subhead-size;
+      margin: 3rem 5rem;
+      //   border: $border-black;
+    }
+
+    & button {
+      all: unset;
+      font-size: $btn-size;
+      padding: 0.8rem 2rem;
+      margin: 1rem 5rem 0 auto;
+      transition: 0.5s;
+      //   border: $border-black;
+
+      &:hover {
+      }
+    }
+  }
+
+  #{&}-clients {
+    @include flex-align;
+    justify-content: space-between;
+    flex-basis: 100%;
+    height: 10vh;
+    width: 85%;
+    gap: 3%;
+    // border: $border-black;
+
+    & > div {
+      flex-basis: 100%;
+      text-align: center;
+      // border: $border-blue;
+    }
+  }
+
+  & > h2 {
+    margin: 0.5rem auto 0;
+    //  border: $border-red;
+  }
+}
