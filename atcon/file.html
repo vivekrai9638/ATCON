@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>hamburger</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+   integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+   crossorigin="anonymous" />
+   
+</head>
+<style>
+  body{
+    overflow-x: hidden;
+  }
+  .nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    border: 2px solid black;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: .9;
+    overflow-x: hidden;
+    transition: .7s;
+
+  }
+</style>
+
+<body>
+  <div id="content">
+    <span class="slide">
+      <a href="#" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+    </span>
+    <div id="menu" class="nav">
+      <a href="#" class="close" onclick="closeMenu()">
+       <i class="fas fa-times"></i>
+      </a>
+      <a href="#">About US</a>
+      <a href="#">Services</a>
+      <a href="#">Gallery</a>
+      <a href="./project.html">Projects</a>
+      <a href="./contact.html">Contact us</a>
+      <a href="#">Blog </a>
+                
+    </div>
+  </div>
+  
+  <script>
+    function openMenu(){
+      document.getElementById('menu').style.width = '250px';
+      document.getElementById('content').style.marginleft = '250px';
+    }
+    function closeMenu(){
+      document.getElementById('menu').style.width = '0';
+      document.getElementById('content').style.marginleft = '0';
+    }
+
+  </script>
+</body>
+</html>
